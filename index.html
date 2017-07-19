@@ -3,89 +3,116 @@
   <head>
     <meta charset="utf-8">
     <title>Scattergories</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
   </head>
-  <body>
-    <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>scattergories</title>
-  </head>
-  <body>
-    <hi>gaming hard!</h1>
 
-      <form>
-  <ol class="flex-outer">
+  <body>
+    <h2>The Game of</h2>
+    <h1>SCATTERGORIES</h1>
+
+    <form id="player1">
+      <ol class="flex-outer">
+        <li>
+          <label for="question-1">RESTAURANTS</label>
+          <input type="text" class="q1" placeholder="">
+        </li>
+        <li>
+          <label for="question-2">THINGS IN A MEDICINE CABINET</label>
+          <input type="text" class="q2" placeholder="">
+        </li>
+        <li>
+          <label for="question-3">BREAKFAST FOODS</label>
+          <input type="text" class="q3" placeholder="">
+        </li>
+        <li>
+          <label for="question-4">A BOYS NAME</label>
+          <input type="text" class="q4" placeholder="">
+        </li>
+        <li>
+          <label for="question-5">U.S. CITIES</label>
+          <input type="text" class="q5" placeholder="">
+        </li>
+        <li>
+          <label for="question-6">THINGS FOUND IN A PARK</label>
+          <input type="text" class="q6" placeholder="">
+        </li>
+        <li>
+          <label for="question-7">SANDWICHES</label>
+          <input type="text" class="q7" placeholder="">
+        </li>
+        <li>
+          <label for="question-8">TV SHOWS</label>
+          <input type="text" class="q8" placeholder="">
+        </li>
+        <li>
+          <label for="question-9">INSECTS</label>
+          <input type="text" class="q9" placeholder="">
+        </li>
+        <li>
+          <label for="question-10">NOTORIOUS PEOPLE</label>
+          <input type="text" class="q10" placeholder="">
+        </li>
+
+        </ul>
+      </li>
+    </ol>
+      <button class="submitBtn" type="submit">Submit</button>
+  </form>
+
+<form id="player2">
+  <ol class="flex-outer" >
     <li>
       <label for="question-1">RESTAURANTS</label>
-      <input type="text" id="first-name" placeholder="">
+      <input type="text" class="q1" placeholder="">
     </li>
     <li>
       <label for="question-2">THINGS IN A MEDICINE CABINET</label>
-      <input type="text" id="last-name" placeholder="">
+      <input type="text" class="q2" placeholder="">
     </li>
     <li>
       <label for="question-3">BREAKFAST FOODS</label>
-      <input type="text" id="last-name" placeholder="">
+      <input type="text" class="q3" placeholder="">
     </li>
     <li>
-      <label for="question-3">A BOYS NAME</label>
-      <input type="text" id="last-name" placeholder="">
+      <label for="question-4">A BOYS NAME</label>
+      <input type="text" class="q4" placeholder="">
     </li>
     <li>
-      <label for="question-3">U.S. CITIES</label>
-      <input type="text" id="last-name" placeholder="">
+      <label for="question-5">U.S. CITIES</label>
+      <input type="text" class="q5" placeholder="">
+    </li>
+    <li>
+      <label for="question-6">THINGS FOUND IN A PARK</label>
+      <input type="text" class="q6" placeholder="">
+    </li>
+    <li>
+      <label for="question-7">SANDWICHES</label>
+      <input type="text" class="q7" placeholder="">
+    </li>
+    <li>
+      <label for="question-8">TV SHOWS</label>
+      <input type="text" class="q8" placeholder="">
+    </li>
+    <li>
+      <label for="question-9">INSECTS</label>
+      <input type="text" class="q9" placeholder="">
+    </li>
+    <li>
+      <label for="question-10">NOTORIOUS PEOPLE</label>
+      <input type="text" class="q10" placeholder="">
     </li>
 
-    <li>
-      <label for="question-3">THINGS FOUND IN A PARK</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">SANDWICHES</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">TV SHOWS</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">INSECTS</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">NOTORIOUS PEOPLE</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">SOMETHING YOU SAVE UP TO BUY</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">VACATION DESTINATIONS</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">VIDEO GAMES</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">ITEMS THAT TAKE A REMOTE</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
-    <li>
-      <label for="question-3">TERMS OF ENDEARMENT</label>
-      <input type="text" id="last-name" placeholder="">
-    </li>
     </ul>
   </li>
-</ol>
-    <button class="submitBtn" type="submit">Submit</button>
+  </ol>
+  <button class="submitBtn" type="submit">Submit</button>
 </form>
 
 
 
-      <script src='game-stats.js'></script>
+
+      <script src='app.js'></script>
   </body>
 </html>
 

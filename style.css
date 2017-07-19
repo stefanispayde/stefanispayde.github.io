@@ -1,0 +1,11 @@
+form{
+  width: 45%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: black solid 1px;
+}
+
+li {
+  padding: 5px;
+  margin-left: -15px;
+}

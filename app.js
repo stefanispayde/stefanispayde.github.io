@@ -14,16 +14,17 @@ const diceRoll = () => {
 
 // save form 1 answers into an array
 const formSubmission = () => {
-//   const player1Answers = [];
-//   const player1Inputs = $("#player1 input");
-//   for (let i=0; i < player1Inputs.length; i++) {
-//     console.log(player1Inputs[i]);
-//     let answer = player1Inputs.eq(i).val();
-//     player1Answers.push(answer);
-//   }
-//   console.log(player1Answers);
+  const player1Answers = [];
+  const player1Inputs = $("#player1 input");
+  for (let i=0; i < player1Inputs.length; i++) {
+    console.log(player1Inputs[i]);
+    let answer = player1Inputs.eq(i).val();
+    player1Answers.push(answer);
+  }
+  console.log(player1Answers);
+}
 
-
+const formSubmission2 = () => {
     const player2Answers = [];
     const player2Inputs = $("#player2 input");
     for (let j = 0; j < player2Inputs.length; j++ ){
@@ -34,7 +35,7 @@ const formSubmission = () => {
     console.log(player2Answers);
   }
 
-// }
+ 
 
 //this function will take the inputs from both forms and compare them to ensure they are not the same answer
 // const compareValues = () => {
@@ -66,7 +67,7 @@ const formSubmission = () => {
   $( "#player2" ).submit(function( event ) {
     event.preventDefault();
     // compareValues();
-    formSubmission();
+    formSubmission2();
   });
 
 });

@@ -13,12 +13,11 @@ const diceRoll = () => {
   }
   // console.log(diceRoll(i));
 }
-// const player1Answers = [];
-// const player2Answers = [];
+let player1Answers = [];
+let player2Answers = [];
 
 // save form 1 answers into an array
 const formSubmission = () => {
-  let player1Answers = [];
   let player1Inputs = $("#player1 input");
   for (let i=0; i < player1Inputs.length; i++) {
     // console.log(player1Inputs[i]);
@@ -31,31 +30,31 @@ const formSubmission = () => {
 
 
 const formSubmission2 = () => {
-    // const player2Answers = [];
-    const player2Inputs = $("#player2 input");
+    let player2Inputs = $("#player2 input");
     for (let j = 0; j < player2Inputs.length; j++ ){
       // console.log(player2Inputs[j]);
       let answer2 = player2Inputs.eq(j).val();
       player2Answers.push(answer2);
     }
-    // console.log(player2Answers);
-    // compareValues(player1Answers, player2Answers);
+    console.log(player2Answers);
+    compareValues(player1Answers, player2Answers);
   }
 
 
-//this function will take the inputs from both forms and compare them to ensure they are not the same answer
-// const compareValues = (array1, array2) => {
-// //   console.log('form2 submitted');
-//
-//   for (let i = 0; i < player2Inputs.length; i++ ){
-//     if (player1Answers[i].toLowerCase() !== player2Answers[i].toLowerCase()) {
-//       point += 1;
-//       console.log(point);
-//     } else {
-//       console.log("This answer is a dulicate. No point earned.");
-//       }
-//   }
-// }
+// this function gives points to each player for their answers
+const compareValues = (array1, array2) => {
+  console.log(array1, array2);
+
+  for (let i = 0; i < array2.length; i++ ){
+    //this if statement compares answers to ensure they are not the same
+    if (array1[i].toLowerCase().trim() !== array2[i].toLowerCase().trim()) {
+      point += 1;
+      console.log(point);
+    } else {
+      console.log("This answer is a dulicate. No point earned.");
+      }
+  }
+}
 
 //clear board/reset function------can I write this in one function and still clear both forms
 // const clearForm1() {
@@ -75,7 +74,7 @@ const formSubmission2 = () => {
 // on submit of form 2, compare values
   $( "#player2" ).submit(function( event ) {
     event.preventDefault();
-  // compareValues(player1Answers, player2Answers);
+    formSubmission2();
   });
 
   $(document).ready(function(){

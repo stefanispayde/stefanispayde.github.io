@@ -77,12 +77,13 @@ const compareValues = (array1, array2) => {
     formSubmission2();
   });
 
+  //this enables player 1 to hide their answers when it is player 2's turn-----making player 2's form disappear
   $(document).ready(function(){
     $("#hide").click(function(){
-        $("p").hide();
+        $("#player1").hide();
     });
     $("#show").click(function(){
-        $("p").show();
+        $("#player1").show();
     });
 });
 

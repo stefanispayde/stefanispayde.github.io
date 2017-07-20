@@ -1,3 +1,4 @@
+
 form{
   width: 45%;
   display: inline-block;
@@ -8,4 +9,13 @@ form{
 li {
   padding: 5px;
   margin-left: -15px;
+}
+/*#page_2 body {
+  background-image:
+}*/
+.resetBtn {
+  margin: auto;
+}
+.hideShow {
+  text-align: center;
 }

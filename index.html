@@ -5,9 +5,10 @@
     <title>Scattergories</title>
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="app.js"></script>
   </head>
 
-  <body>
+  <body #id="page_1">
     <h2>The Game of</h2>
     <h1>SCATTERGORIES</h1>
 
@@ -53,12 +54,15 @@
           <label for="question-10">NOTORIOUS PEOPLE</label>
           <input type="text" class="q10" placeholder="">
         </li>
-
-        </ul>
-      </li>
-    </ol>
+      </ol>
       <button class="submitBtn" type="submit">Submit</button>
+      <!-- <input class="resetBtn" type="button" onclick="clearForm1()" value="Reset form"> -->
+
   </form>
+
+  <!-- <p>Player 1, please make sure to hide your answers before player 2 begins!</p>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button> -->
 
 <form id="player2">
   <ol class="flex-outer" >
@@ -107,14 +111,13 @@
   </li>
   </ol>
   <button class="submitBtn" type="submit">Submit</button>
+  <!-- <input class="resetBtn" type="button" onclick="clearForm()" value="Reset form"> -->
 </form>
 
+<div class="hideShow">
+  <p>Player 1, please make sure to hide your answers before player 2 begins!</p>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+</div>
 
-
-
-      <script src='app.js'></script>
-  </body>
-</html>
-
-  </body>
 </html>

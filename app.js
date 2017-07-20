@@ -1,6 +1,8 @@
 $(()=> {
-console.log("What up?");
-$
+// console.log("What up?");
+
+let point = 0;
+
 //this is the array/for loop to choose a random letter from the dice
 let rollDie = ['a', 'b', 'c','d','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
@@ -11,63 +13,78 @@ const diceRoll = () => {
   }
   // console.log(diceRoll(i));
 }
+// const player1Answers = [];
+// const player2Answers = [];
 
 // save form 1 answers into an array
 const formSubmission = () => {
-  const player1Answers = [];
-  const player1Inputs = $("#player1 input");
+  let player1Answers = [];
+  let player1Inputs = $("#player1 input");
   for (let i=0; i < player1Inputs.length; i++) {
-    console.log(player1Inputs[i]);
+    // console.log(player1Inputs[i]);
     let answer = player1Inputs.eq(i).val();
     player1Answers.push(answer);
   }
+  // return player1Answers;
   console.log(player1Answers);
 }
 
+
 const formSubmission2 = () => {
-    const player2Answers = [];
+    // const player2Answers = [];
     const player2Inputs = $("#player2 input");
     for (let j = 0; j < player2Inputs.length; j++ ){
-      console.log(player2Inputs[j]);
+      // console.log(player2Inputs[j]);
       let answer2 = player2Inputs.eq(j).val();
       player2Answers.push(answer2);
     }
-    console.log(player2Answers);
+    // console.log(player2Answers);
+    // compareValues(player1Answers, player2Answers);
   }
 
- 
 
 //this function will take the inputs from both forms and compare them to ensure they are not the same answer
-// const compareValues = () => {
-//   console.log('form2 submitted');
-//   const player1Answers = [];
-//   const player2Answers = [];
-
-    // const str1 = " ";
-    // const str2 = " ";
-    // const n = str1.localeCompare(str2);
-    // let point = 0;
-    // document.getElementById("form").innerHTML = n;
-    //   return n;
-    //
-    //   if(n = 1) {
-    //     console.log("This answer is not a duplicate.");
-    //       point++;
-    //   } else {
-    //     console.log("This answer is a duplicate. No point given.");
-    //   }
+// const compareValues = (array1, array2) => {
+// //   console.log('form2 submitted');
+//
+//   for (let i = 0; i < player2Inputs.length; i++ ){
+//     if (player1Answers[i].toLowerCase() !== player2Answers[i].toLowerCase()) {
+//       point += 1;
+//       console.log(point);
+//     } else {
+//       console.log("This answer is a dulicate. No point earned.");
+//       }
+//   }
 // }
 
-// on submit of form 1, save answers into an array
+//clear board/reset function------can I write this in one function and still clear both forms
+// const clearForm1() {
+//     document.getElementById("player1").reset();
+//   }
+//
+// const clearForm2() {
+//     document.getElementById("player2").reset();
+//   }
+
+// on submit of form 1, save answers into an array-------also need hide function for player1's input before formSubmission2 is called
   $( "#player1" ).submit(function( event ) {
     event.preventDefault();
+    console.log('form 1 submission');
     formSubmission();
   });
 // on submit of form 2, compare values
   $( "#player2" ).submit(function( event ) {
     event.preventDefault();
-    // compareValues();
-    formSubmission2();
+  // compareValues(player1Answers, player2Answers);
   });
 
+  $(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
 });
+
+})

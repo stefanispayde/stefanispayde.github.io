@@ -76,7 +76,7 @@ const notEmpty2 = (array2) => {
 
 
 // this function checks to see if players have the same answer on the same question, gives points based on number of unique answers and tallys them
-const compareValues = (player1Answers, player2Answers) => {
+const compareValues = (answers1, answers2) => {
   // console.log(answers1, answers2);
   for (let i = 0; i < array2.length; i++ ){
     //this if statement compares answers to ensure they are not the same

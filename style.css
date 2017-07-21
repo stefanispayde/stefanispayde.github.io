@@ -1,31 +1,19 @@
-#page_1, body {
+#page_1 body {
 }
-#page_1, form{
+#page_1 form{
   width: 45%;
   display: inline-block;
   box-sizing: border-box;
   border: black solid 1px;
 }
 
-li {
+#page_1 li {
   padding: 5px;
   margin-left: -15px;
 }
-.resetBtn {
+#page_1 .resetBtn {
   margin: auto;
 }
-/*.hideShow {
-  text-align: center;
-}*/
-/*#page_2, #home_page_img{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-#page_2, h1{
-  color: white;
-  font-size:  75;
-}*/
 #page_2 #home_page_img {
   background-size: 100% auto;
   height: 100%;
@@ -33,3 +21,13 @@ li {
   background-size: contain;
   background-position: center;
 }
+  @font-face {
+    font-family: myFaveFont;
+    src: url(Origin-Regular.ttf);
+  }
+  #page_2 div {
+    font-family: myFaveFont;
+    margin: auto;
+    font-size: 75px;
+    color: black;
+  }

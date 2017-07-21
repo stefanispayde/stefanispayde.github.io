@@ -1,5 +1,6 @@
-
-form{
+#page_1, body {
+}
+#page_1, form{
   width: 45%;
   display: inline-block;
   box-sizing: border-box;
@@ -10,12 +11,25 @@ li {
   padding: 5px;
   margin-left: -15px;
 }
-/*#page_2 body {
-  background-image:
-}*/
 .resetBtn {
   margin: auto;
 }
-.hideShow {
+/*.hideShow {
   text-align: center;
+}*/
+/*#page_2, #home_page_img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+#page_2, h1{
+  color: white;
+  font-size:  75;
+}*/
+#page_2 #home_page_img {
+  background-size: 100% auto;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
 }

@@ -2,21 +2,26 @@ $(()=> {
 // console.log("JS running!");
 
 let player1Points = 0;
+let player1NumEmpty = 0;
 let player2Points = 0;
+let player2NumEmpty = 0;
+let die = "";
 
-//this is the array/for loop to choose a random letter from the dice
+
+
+//this is the array/for loop to choose a random letter from the dice, have click event roll die
 let rollDie = ['a', 'b', 'c','d','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 const diceRoll = () => {
 
   for (let i = 0; i <= rollDie.length; i++){
-  let die = rollDie[Math.floor(Math.random()* rollDie.length)];
+  die = rollDie[Math.floor(Math.random()* rollDie.length)];
+
   }
-  // alert("Your letter is " + die + ".");
+  alert("Your letter is " + die + "."); //instead of alert set HTML of div to this phrase
 }
 
-// diceRoll();
-
+//made these global due to scope issues and having to deal with so many functions
 let player1Answers = [];
 let player2Answers = [];
 
@@ -48,48 +53,47 @@ const formSubmission2 = () => {
 
 //this function will check through answer array for player 1 to check for empty strings
 const notEmpty1 = (array1) => {
-  let numEmpty = 0;
+  let player1NumEmpty = 0;
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] === "") {
-      numEmpty++;
-      console.log("empty string " + numEmpty);
+      player1NumEmpty++;
+      console.log("empty string " + player1NumEmpty);
     }
   }
 }
 
 //this function will check through answer array for player 2 to check for empty strings
 const notEmpty2 = (array2) => {
-  let numEmpty2 = 0;
+  let player2NumEmpty = 0;
   for (let j = 0; j < array2.length; j++) {
     if (array2[j] === "") {
-      numEmpty2++;
-      console.log("empty string " + numEmpty2);
+      player2NumEmpty++;
+      console.log("empty string " + player2NumEmpty);
     }
   }
-  compareValues(array1, array2);//need to grab array1, will be out of scope
+  compareValues(array1, array2);     //need to grab array1, will be out of scope
 }
 
 
 // this function checks to see if players have the same answer on the same question, gives points based on number of unique answers and tallys them
-// const compareValues = (answers1, answers2) => {
-//   console.log(answers1, answers2);
-//   for (let i = 0; i < array2.length; i++ ){
-//     //this if statement compares answers to ensure they are not the same
-//         if (array1[i].toLowerCase().trim() !== array2[i].toLowerCase().trim()){
-//           player1Points += 1;
-//           player2Points += 1;
-//           console.log("Player 1, you have recieved " + player1Points + " points this round.");
-//           console.log("Player 2, you have recieved " + player2Points + " points this round.");
-//         } else {
-//           console.log("This answer is a dulicate. No point earned.");
-//           }
-//   }
-// // // // clearForm1();
-// // // // clearForm2();
-// }
-const tallyScore = (player1Points, numEmpty, player2Points, numEmpty2) => {
-  player1Tally = player1Points - numEmpty;
-  player2Tally = player2Points - numEmpty2;
+const compareValues = (player1Answers, player2Answers) => {
+  // console.log(answers1, answers2);
+  for (let i = 0; i < array2.length; i++ ){
+    //this if statement compares answers to ensure they are not the same
+        if (array1[i].toLowerCase().trim() !== array2[i].toLowerCase().trim()){
+          player1Points += 1;
+          player2Points += 1;
+        } else {
+          console.log("This answer is a dulicate. No point earned.");
+          }
+  }
+  tallyScore();
+// clearForm1();
+// clearForm2();
+}
+const tallyScore = (numEmpty, numEmpty2) => {
+  player1Tally = player1Points - player1NumEmpty;
+  player2Tally = player2Points - player2NumEmpty;
   console.log("Player 1 has a total of " + player1Tally + " points.");
   console.log("Player 2 has a total of " + player2Tally + " points.")
 
@@ -102,14 +106,15 @@ const tallyScore = (player1Points, numEmpty, player2Points, numEmpty2) => {
 
 
 
-//clear board/reset function------can I write this in one function and still clear both forms
-// const clearForm1 = () => {
-//     $("#player1").reset();
-//   }
-//
-// const clearForm2 = () => {
-//     $("#player2").reset();
-//   }
+// clear board/reset function----researched and found calling and defining a function within another function on stack overflow
+const clearForm1 = () => {
+    $("#player1").reset();
+    clearForm2();
+
+    const clearForm2 = () => {
+        $("#player2").reset();
+      }
+  }
 
 // on submit of form 1, save answers into an array-------also need hide function for player1's input before formSubmission2 is called
   $( "#player1" ).submit(function( event ) {

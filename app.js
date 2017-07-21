@@ -53,7 +53,6 @@ const formSubmission2 = () => {
 
 //this function will check through answer array for player 1 to check for empty strings
 const notEmpty1 = (array1) => {
-  let player1NumEmpty = 0;
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] === "") {
       player1NumEmpty++;
@@ -64,23 +63,22 @@ const notEmpty1 = (array1) => {
 
 //this function will check through answer array for player 2 to check for empty strings
 const notEmpty2 = (array2) => {
-  let player2NumEmpty = 0;
   for (let j = 0; j < array2.length; j++) {
     if (array2[j] === "") {
       player2NumEmpty++;
       console.log("empty string " + player2NumEmpty);
     }
   }
-  compareValues(array1, array2);     //need to grab array1, will be out of scope
+  compareValues();     //need to grab array1, will be out of scope
 }
 
 
 // this function checks to see if players have the same answer on the same question, gives points based on number of unique answers and tallys them
-const compareValues = (answers1, answers2) => {
+const compareValues = () => {
   // console.log(answers1, answers2);
-  for (let i = 0; i < array2.length; i++ ){
+  for (let i = 0; i < player2Answers.length; i++ ){
     //this if statement compares answers to ensure they are not the same
-        if (array1[i].toLowerCase().trim() !== array2[i].toLowerCase().trim()){
+        if (player1Answers[i].toLowerCase().trim() !== player2Answers[i].toLowerCase().trim()){
           player1Points += 1;
           player2Points += 1;
         } else {
@@ -91,17 +89,25 @@ const compareValues = (answers1, answers2) => {
 // clearForm1();
 // clearForm2();
 }
-const tallyScore = (numEmpty, numEmpty2) => {
+const tallyScore = () => {
+  console.log("---------");
+  console.log(player1Points);
+  console.log(player1NumEmpty);
   player1Tally = player1Points - player1NumEmpty;
   player2Tally = player2Points - player2NumEmpty;
+
   console.log("Player 1 has a total of " + player1Tally + " points.");
   console.log("Player 2 has a total of " + player2Tally + " points.")
 
+  let message = "";
     if (player1Tally > player2Tally) {
-      console.log("Player 1 is the winner!");
-    }else{
-      console.log("Player 2 is the winner!");
+      message = "Player 1 is the winner!";
+    }else if (player2Tally === player1Tally) {
+      message = "It's a tie!";
+    } else{
+      message = "Player 2 is the winner!";
     }
+      alert (message);
 }
 
 

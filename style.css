@@ -21,13 +21,14 @@
   background-size: contain;
   background-position: center;
 }
-  @font-face {
+  #page_2 @font-face {
     font-family: myFaveFont;
     src: url(Origin-Regular.ttf);
   }
   #page_2 div {
     font-family: myFaveFont;
-    margin: auto;
-    font-size: 75px;
+  }
+  a.play a.rules {
+    font-family: 50px;
     color: black;
   }

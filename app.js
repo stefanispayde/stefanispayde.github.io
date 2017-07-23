@@ -14,7 +14,6 @@ const start = () => {
    let getStarted = prompt("Welcome to Scattergories! This game has specific rules and even startegies. Please visit the rules page and have a look see. Are you ready to start? Y/N");
    if (getStarted === "Y" || getStarted === "y") {
      getName();
-    //  diceRoll();
    } else if
       (getStarted === "N" || getStarted === 'n') {
         alert("Another time then. Goodbye!");
@@ -93,7 +92,7 @@ const notEmpty2 = (array2) => {
       console.log("empty string " + player2NumEmpty);
     }
   }
-  compareValues();     
+  compareValues();
 }
 
 
@@ -133,23 +132,6 @@ const tallyScore = () => {
       alert (message);
     }
 
-    // $("#player1").reset();
-    // $("#player2").reset();
-
-
-
-// clear board/reset function----attempted several times to write a clear form function, but to make deadline settled for it clearing upon refresh
-// const clearForm1 = () => {
-// // $("#player1").reset();
-// // $("#player2").reset();
-// //     $("#player1").reset;
-// //     clearForm2();
-// }
-// const clearForm2 = () => {
-//     $("#player2").reset;
-
-// }
-
 
 // on submit of form 1, save answers into an array-------also need hide function for player1's input before formSubmission2 is called
   $( "#player1" ).submit(function( event ) {
@@ -164,15 +146,22 @@ const tallyScore = () => {
 
 start();
 
-// $( '#timer').click(function(e)  {
-//   $(this).timedText();
-// }
-//
-// const timedText = () => {
-//      setTimeout(myTimeout1, 45000)
-//  }
-//  const myTimeout1 = ()  => {
-//      $("#timer").text = "45 seconds";
-//  }
+let timer;
+let time = 45;
+const setTimer = () => {
+  timer = setInterval(() => {
+    time--;
+    if( time === 0){
+      clearInterval(timer);
+    }
+
+    $('.timer').text('timer: ' + time + "s")
+  }, 1000)
+}
+
+$("#button").on('click', (e) =>{
+  setTimer();
+})
+
 
 });  //end of window upload

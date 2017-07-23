@@ -1,7 +1,11 @@
 #page_1 {
+  /*background-image: url("[Imgur](http://i.imgur.com/vsGeKDn.gif)");*/
   background-color: black;
   color: white;
   font-family: 'Poiret One', cursive;
+  background-position: center;
+  background-size: cover;
+  /*z-index: -1;*/
 }
   #page_1  h1{
   font-family: 'Poiret One', cursive;
@@ -9,9 +13,9 @@
   letter-spacing: 3px;
   text-align: center;
   margin-top: auto;
+  /*z-index: 1;*/
   }
   #page_1 .play {
-    /*font-family: 'Poiret One', cursive;*/
     font-size: 40px;
     color: white;
     list-style: none;
@@ -20,14 +24,13 @@
     margin-left: 350px;
   }
   #page_1 .rules {
-    /*font-family: 'Poiret One', cursive;*/
     font-size: 40px;
     color: white;
     list-style: none;
     text-decoration: none;
     display: inline-block;
     float: right;
-    margin-right: 200px;
+    margin-right: 250px;
   }
 #page_2 {
   background-color: black;

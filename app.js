@@ -137,6 +137,8 @@ const tallyScore = () => {
   $( "#player1" ).submit(function( event ) {
     event.preventDefault();
     formSubmission();
+    alert("Hand the computer to player 2");
+    setTimer();
   });
 // on submit of form 2, compare values
   $( "#player2" ).submit(function( event ) {
@@ -149,10 +151,13 @@ start();
 let timer;
 let time = 45;
 const setTimer = () => {
+  time = 45;
   timer = setInterval(() => {
     time--;
-    if( time === 0){
+    if( time == 0){
+      // time = 0;
       clearInterval(timer);
+      alert("Time's up! Hit submit!");
     }
 
     $('.timer').text('timer: ' + time + "s")

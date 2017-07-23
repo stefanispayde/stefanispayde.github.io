@@ -6,12 +6,12 @@ let player1NumEmpty = 0;
 let player2Points = 0;
 let player2NumEmpty = 0;
 let die = "";
-let getStarted = '';
+// let getStarted = '';
 let name1 = "";
 let name2 = "";
 
 const start = () => {
-   getStarted = prompt("Welcome to Scattergories! This game has specific rules and even startegies. Please visit the rules page and have a look see. Are you ready to start? Y/N");
+   let getStarted = prompt("Welcome to Scattergories! This game has specific rules and even startegies. Please visit the rules page and have a look see. Are you ready to start? Y/N");
    if (getStarted === "Y" || getStarted === "y") {
      getName();
     //  diceRoll();
@@ -26,9 +26,10 @@ const start = () => {
 }
 
 const getName = () => {
-  name = prompt("Please enter your name.");
-  let newName1 = name1;
-  let newName2 = name2;
+  name1 = prompt("Please enter your name.");
+  // let name1 = "";
+  name2 = prompt("Player 2, what is your name?")
+  // let name2 = "";
   diceRoll();
 }
 
@@ -92,7 +93,7 @@ const notEmpty2 = (array2) => {
       console.log("empty string " + player2NumEmpty);
     }
   }
-  compareValues();     //need to grab array1, will be out of scope
+  compareValues();     
 }
 
 
@@ -123,11 +124,11 @@ const tallyScore = () => {
 
   let message = "";
     if (player1Tally > player2Tally) {
-      message = newName1 + " is the winner!";
+      message = name1 + " is the winner!";
     }else if (player2Tally === player1Tally) {
       message = "It's a tie!";
     } else{
-      message = newName2 + " is the winner!";
+      message = name2 + " is the winner!";
     }
       alert (message);
     }

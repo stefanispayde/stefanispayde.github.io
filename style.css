@@ -1,21 +1,19 @@
-#page_1  {
+#page_1 {
   background-color: black;
   color: white;
-  background-size: 100% auto;
-  height: 100%;
-  width: 100%;
-  background-size: contain;
-  background-position: center;
-  position: fixed;
+  font-family: 'Poiret One', cursive;
+
+
 }
   #page_1  h1{
   font-family: 'Poiret One', cursive;
-  font-size: 65px;
-  letter-spacing: 1px;
+  font-size: 85px;
+  letter-spacing: 3px;
   text-align: center;
+  margin-top: auto;
   }
   #page_1 .play {
-    font-family: 'Poiret One', cursive;
+    /*font-family: 'Poiret One', cursive;*/
     font-size: 40px;
     color: white;
     list-style: none;
@@ -24,7 +22,7 @@
     margin-left: 350px;
   }
   #page_1 .rules {
-    font-family: 'Poiret One', cursive;
+    /*font-family: 'Poiret One', cursive;*/
     font-size: 40px;
     color: white;
     list-style: none;
@@ -35,10 +33,11 @@
   }
 #page_2 {
   background-color: black;
+  font-family: 'Poiret One', cursive;
   color: white;
 }
 #page_2 h1 {
-  font-family: 'Poiret One', cursive;
+  /*font-family: 'Poiret One', cursive;*/
   font-size: 50px;
   margin-top: 5px;
  text-align: center;
@@ -58,4 +57,49 @@ letter-spacing: 1px;
 #page_2 li {
   padding: 5px;
   margin-left: -15px;
+}
+#page_3 {
+  background-color: black;
+  font-family: 'Poiret One', cursive;
+  color:white;
+}
+#page_3 h1 {
+  font-size: 85px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: auto;
+
+}
+#page_3 h2 {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  margin-top: -50px;
+}
+/*page_3 .rules_box {
+  height:300px;
+  width: 300px;
+  border-color: white
+  box-sizing: border-box;
+  border: white solid 1px;
+}*/
+#page_3 .rules_box p {
+  /*text-align: left;*/
+  /*padding: 20px;*/
+
+  /*color: white;
+  font-size: 14px;*/
+  height:500px;
+  width: 500px;
+  border-color: white
+  box-sizing: border-box;
+  border: white solid 1px;
+  margin: 0 auto;
+}
+#page_3 #rules {
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  text-align: left;
+  line-height: 150%;
 }

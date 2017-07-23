@@ -1,34 +1,61 @@
-#page_1 body {
-}
-#page_1 form{
-  width: 45%;
-  display: inline-block;
-  box-sizing: border-box;
-  border: black solid 1px;
-}
-
-#page_1 li {
-  padding: 5px;
-  margin-left: -15px;
-}
-#page_1 .resetBtn {
-  margin: auto;
-}
-#page_2 #home_page_img {
+#page_1  {
+  background-color: black;
+  color: white;
   background-size: 100% auto;
   height: 100%;
   width: 100%;
   background-size: contain;
   background-position: center;
+  position: fixed;
 }
-  #page_2 @font-face {
-    font-family: myFaveFont;
-    src: url(Origin-Regular.ttf);
+  #page_1  h1{
+  font-family: 'Poiret One', cursive;
+  font-size: 65px;
+  letter-spacing: 1px;
+  text-align: center;
   }
-  #page_2 div {
-    font-family: myFaveFont;
+  #page_1 .play {
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 350px;
   }
-  a.play a.rules {
-    font-family: 50px;
-    color: black;
+  #page_1 .rules {
+    font-family: 'Poiret One', cursive;
+    font-size: 40px;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    margin-right: 200px;
   }
+#page_2 {
+  background-color: black;
+  color: white;
+}
+#page_2 h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 50px;
+  margin-top: 5px;
+ text-align: center;
+}
+#page_2 #gameTitle {
+letter-spacing: 1px;
+}
+
+#page_2 form{
+  width: 45%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: white solid 1px;
+  margin-left: 40px;
+}
+
+#page_2 li {
+  padding: 5px;
+  margin-left: -15px;
+}

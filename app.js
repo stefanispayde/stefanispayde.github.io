@@ -6,8 +6,31 @@ let player1NumEmpty = 0;
 let player2Points = 0;
 let player2NumEmpty = 0;
 let die = "";
+let getStarted = '';
+let name1 = "";
+let name2 = "";
 
+const start = () => {
+   getStarted = prompt("Welcome to Scattergories! This game has specific rules and even startegies. Please visit the rules page and have a look see. Are you ready to start? Y/N");
+   if (getStarted === "Y" || getStarted === "y") {
+     getName();
+    //  diceRoll();
+   } else if
+      (getStarted === "N" || getStarted === 'n') {
+        alert("Another time then. Goodbye!");
+      }
+     else {
+       alert("Please choose an appropriate option");
+       start();
+   }
+}
 
+const getName = () => {
+  name = prompt("Please enter your name.");
+  let newName1 = name1;
+  let newName2 = name2;
+  diceRoll();
+}
 
 //this is the array/for loop to choose a random letter from the dice, have click event roll die
 let rollDie = ['a', 'b', 'c','d','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -86,8 +109,7 @@ const compareValues = () => {
           }
   }
   tallyScore();
-// clearForm1();
-// clearForm2();
+
 }
 const tallyScore = () => {
   console.log("---------");
@@ -101,26 +123,32 @@ const tallyScore = () => {
 
   let message = "";
     if (player1Tally > player2Tally) {
-      message = "Player 1 is the winner!";
+      message = newName1 + " is the winner!";
     }else if (player2Tally === player1Tally) {
       message = "It's a tie!";
     } else{
-      message = "Player 2 is the winner!";
+      message = newName2 + " is the winner!";
     }
       alert (message);
-}
+    }
+
+    // $("#player1").reset();
+    // $("#player2").reset();
 
 
 
-// clear board/reset function----researched and found calling and defining a function within another function on stack overflow
-const clearForm1 = () => {
-    $("#player1").reset();
-    clearForm2();
+// clear board/reset function----attempted several times to write a clear form function, but to make deadline settled for it clearing upon refresh
+// const clearForm1 = () => {
+// // $("#player1").reset();
+// // $("#player2").reset();
+// //     $("#player1").reset;
+// //     clearForm2();
+// }
+// const clearForm2 = () => {
+//     $("#player2").reset;
 
-    const clearForm2 = () => {
-        $("#player2").reset();
-      }
-  }
+// }
+
 
 // on submit of form 1, save answers into an array-------also need hide function for player1's input before formSubmission2 is called
   $( "#player1" ).submit(function( event ) {
@@ -133,4 +161,17 @@ const clearForm1 = () => {
     formSubmission2();
   });
 
-});
+start();
+
+// $( '#timer').click(function(e)  {
+//   $(this).timedText();
+// }
+//
+// const timedText = () => {
+//      setTimeout(myTimeout1, 45000)
+//  }
+//  const myTimeout1 = ()  => {
+//      $("#timer").text = "45 seconds";
+//  }
+
+});  //end of window upload

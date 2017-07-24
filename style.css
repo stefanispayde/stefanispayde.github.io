@@ -19,6 +19,7 @@
     display: inline-block;
     margin-left: 335px;
     margin-top: -10px;
+    letter-spacing: 2px;
   }
   #page_1 .rules {
     font-size: 40px;
@@ -29,6 +30,8 @@
     float: right;
     margin-right: 335px;
     margin-top: -10px;
+    letter-spacing: 1px;
+
   }
   h3 {
     margin: 150px 315px;;

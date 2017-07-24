@@ -8,25 +8,31 @@
   font-size: 85px;
   letter-spacing: 3.5px;
   text-align: center;
-  margin-top: auto;
+  margin-top: 100px;;
   padding: 0;
   }
   #page_1 .play {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     list-style: none;
     text-decoration: none;
     display: inline-block;
-    margin-left: 375px;
+    margin-left: 335px;
+    margin-top: -10px;
   }
   #page_1 .rules {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     list-style: none;
     text-decoration: none;
     display: inline-block;
     float: right;
-    margin-right: 275px;
+    margin-right: 335px;
+    margin-top: -10px;
+  }
+  h3 {
+    margin: 150px 315px;;
+    font-size: 30px;
   }
 #page_2 {
   background-color: black;

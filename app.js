@@ -1,3 +1,4 @@
+
 $(()=> {
 // console.log("JS running!");
 
@@ -44,7 +45,7 @@ const diceRoll = () => {
   alert("Your letter is " + die + "."); //instead of alert set HTML of div to this phrase
 }
 
-//made these global due to scope issues and dealing with so many functions
+//made these global due to scope issues and having to deal with so many functions
 let player1Answers = [];
 let player2Answers = [];
 
@@ -149,9 +150,9 @@ const tallyScore = () => {
 start();
 
 let timer;
-let time = 30;
+let time = 45;
 const setTimer = () => {
-  time = 30;
+  time = 45;
   timer = setInterval(() => {
     time--;
     if( time == 0){
@@ -163,6 +164,7 @@ const setTimer = () => {
     $('.timer').text('timer: ' + time + "s")
   }, 1000)
 }
+
 $("#button").on('click', (e) =>{
   setTimer();
 })

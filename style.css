@@ -1,36 +1,32 @@
 #page_1 {
-  /*background-image: url("[Imgur](http://i.imgur.com/vsGeKDn.gif)");*/
   background-color: black;
   color: white;
   font-family: 'Poiret One', cursive;
-  background-position: center;
-  background-size: cover;
-  /*z-index: -1;*/
 }
   #page_1  h1{
   font-family: 'Poiret One', cursive;
   font-size: 85px;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
   text-align: center;
   margin-top: auto;
-  /*z-index: 1;*/
+  padding: 0;
   }
   #page_1 .play {
-    font-size: 40px;
+    font-size: 50px;
     color: white;
     list-style: none;
     text-decoration: none;
     display: inline-block;
-    margin-left: 350px;
+    margin-left: 375px;
   }
   #page_1 .rules {
-    font-size: 40px;
+    font-size: 50px;
     color: white;
     list-style: none;
     text-decoration: none;
     display: inline-block;
     float: right;
-    margin-right: 250px;
+    margin-right: 275px;
   }
 #page_2 {
   background-color: black;
@@ -38,10 +34,10 @@
   color: white;
 }
 #page_2 h1 {
-  /*font-family: 'Poiret One', cursive;*/
   font-size: 50px;
   margin-top: 5px;
  text-align: center;
+ line-height: 80%;
 }
 #page_2 #gameTitle {
 letter-spacing: 1px;
@@ -53,6 +49,7 @@ letter-spacing: 1px;
   box-sizing: border-box;
   border: white solid 1px;
   margin-left: 45px;
+  margin-bottom: 50px;
 }
 
 #page_2 li {
@@ -62,14 +59,14 @@ letter-spacing: 1px;
 
 }
 #page_2 .timer #click {
-  font-size: 14px;
+  font-size: 20px;
   color: white;
 }
-#page_2 .timer #btn {
+#page_2 .timer #button {
   background color: black;
   border: white 1px solid;
-  /*color: white;*/
-  padding: 10px;
+  color: white;
+  padding: 5px;
 }
 #page_3 {
   background-color: black;

@@ -7,7 +7,6 @@ let player1NumEmpty = 0;
 let player2Points = 0;
 let player2NumEmpty = 0;
 let die = "";
-// let getStarted = '';
 let name1 = "";
 let name2 = "";
 
@@ -53,7 +52,6 @@ let player2Answers = [];
 const formSubmission = () => {
   let player1Inputs = $("#player1 input");
   for (let i=0; i < player1Inputs.length; i++) {
-    // console.log(player1Inputs[i]);
     let answer = player1Inputs.eq(i).val();
     player1Answers.push(answer);
   }
@@ -66,7 +64,6 @@ const formSubmission = () => {
 const formSubmission2 = () => {
     let player2Inputs = $("#player2 input");
     for (let j = 0; j < player2Inputs.length; j++ ){
-      // console.log(player2Inputs[j]);
       let answer2 = player2Inputs.eq(j).val();
       player2Answers.push(answer2);
     }
@@ -99,7 +96,6 @@ const notEmpty2 = (array2) => {
 
 // this function checks to see if players have the same answer on the same question, gives points based on number of unique answers and tallys them
 const compareValues = () => {
-  // console.log(answers1, answers2);
   for (let i = 0; i < player2Answers.length; i++ ){
     //this if statement compares answers to ensure they are not the same
         if (player1Answers[i].toLowerCase().trim() !== player2Answers[i].toLowerCase().trim()){
@@ -156,7 +152,7 @@ const setTimer = () => {
   timer = setInterval(() => {
     time--;
     if( time == 0){
-      // time = 0;
+
       clearInterval(timer);
       alert("Time's up! Hit submit!");
     }

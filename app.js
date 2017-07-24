@@ -149,9 +149,9 @@ const tallyScore = () => {
 start();
 
 let timer;
-let time = 45;
+let time = 30;
 const setTimer = () => {
-  time = 45;
+  time = 30;
   timer = setInterval(() => {
     time--;
     if( time == 0){
@@ -163,7 +163,6 @@ const setTimer = () => {
     $('.timer').text('timer: ' + time + "s")
   }, 1000)
 }
-
 $("#button").on('click', (e) =>{
   setTimer();
 })

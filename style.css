@@ -17,7 +17,7 @@
     list-style: none;
     text-decoration: none;
     display: inline-block;
-    margin-left: 335px;
+    margin-left: 400px;
     margin-top: -10px;
     letter-spacing: 2px;
   }
@@ -28,14 +28,15 @@
     text-decoration: none;
     display: inline-block;
     float: right;
-    margin-right: 335px;
+    margin-right: 360px;
     margin-top: -10px;
     letter-spacing: 1px;
 
   }
   h3 {
     margin: 150px 315px;;
-    font-size: 30px;
+    font-size: 28px;
+    letter-spacing: .5px;
   }
 #page_2 {
   background-color: black;

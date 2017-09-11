@@ -8,9 +8,19 @@
   font-size: 85px;
   letter-spacing: 3.5px;
   text-align: center;
-  margin-top: 100px;;
+  margin-top: auto 5px, 5px, auto;
   padding: 0;
   }
+  .container {
+      position: relative;
+      text-align: center;
+    }
+  .bottom-right {
+    position: absolute;
+    bottom: -300px;
+    right: 16px;
+    font-size: 24px;
+}
   #page_1 .play {
     font-size: 40px;
     color: white;
@@ -31,12 +41,27 @@
     margin-right: 360px;
     margin-top: -10px;
     letter-spacing: 1px;
-
   }
-  h3 {
+  #player1 label {
+    float: left;
+  }
+  #player1 input {
+    margin-right: 50px;
+    float: right;
+    width: 200px;
+  }
+  /*h3 {
     margin: 150px 315px;;
     font-size: 28px;
     letter-spacing: .5px;
+  }*/
+  #player2 label {
+    float: left;
+  }
+  #player2 input {
+    margin-right: 50px;
+    float: right;
+    width: 200px;
   }
 #page_2 {
   background-color: black;
@@ -45,21 +70,18 @@
 }
 #page_2 h1 {
   font-size: 50px;
-  margin-top: 5px;
+  margin-top: 15px;
  text-align: center;
- line-height: 80%;
+ line-height: 60%;
+ letter-spacing: 3px;
 }
-#page_2 #gameTitle {
-letter-spacing: 1px;
-}
-
 #page_2 form{
   width: 45%;
   display: inline-block;
   box-sizing: border-box;
   border: white solid 1px;
   margin-left: 45px;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 #page_2 li {
@@ -69,14 +91,24 @@ letter-spacing: 1px;
 
 }
 #page_2 .timer #click {
-  font-size: 20px;
+  font-size: 25px;
   color: white;
+  margin-left: 45px;
 }
 #page_2 .timer #button {
-  background color: black;
-  border: white 1px solid;
-  color: white;
+  background color: #FFFFFF;
+  border: #FFFFFF 1px solid;
+  font-family: 'Poiret One', cursive;
+  font-size: 16px;
+  color: black;
   padding: 5px;
+  margin-left: 15px;
+}
+.submitBtn {
+  font-family: 'Poiret One', cursive;
+  font-size: 16px;
+  margin-left: 25px;
+  margin-bottom: 15px;
 }
 #page_3 {
   background-color: black;

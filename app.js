@@ -70,6 +70,7 @@ const formSubmission2 = () => {
     console.log(player2Answers);
     $('#player1').css('visibility', 'visible');
     notEmpty2(player2Answers);
+    clearInterval(timer);
 }
 
 //this function will check through answer array for player 1 to check for empty strings
@@ -91,8 +92,25 @@ const notEmpty2 = (array2) => {
     }
   }
   compareValues();
+  // correctLetter();
 }
 
+  // const correctLetter1 = ()=> {
+  //   for(i = 0; i < array1.length; i++){
+  //     if (array1[0] == die) {
+  //       console.log("This answer did not begin with the letter rolled.");
+  //     }
+  //   }
+  // }
+  //
+  // const correctLetter2 = ()=> {
+  //   for(i = 0; i < array1.length; i++){
+  //     if (array2[0] !=== die) {
+  //       console.log("This answer did not begin with the letter rolled.");
+  //     }
+  //   }
+  //   compareValues();
+  // }
 
 // this function checks to see if players have the same answer on the same question, gives points based on number of unique answers and tallys them
 const compareValues = () => {
@@ -141,6 +159,7 @@ const tallyScore = () => {
   $( "#player2" ).submit(function( event ) {
     event.preventDefault();
     formSubmission2();
+
   });
 
 start();
@@ -156,6 +175,7 @@ const setTimer = () => {
       clearInterval(timer);
       alert("Time's up! Hit submit!");
     }
+
 
     $('.timer').text('timer: ' + time + "s")
   }, 1000)

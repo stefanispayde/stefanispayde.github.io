@@ -1,5 +1,12 @@
 #page_1 {
-  background-color: black;
+  /*background-image: url("https://i.imgur.com/tI3xwzc.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-size: cover;*/
+  background-size: 100%;
+  height: 50%;
+  width: 100%
+  margin: auto; 0;*/
   color: white;
   font-family: 'Poiret One', cursive;
 }
@@ -15,7 +22,19 @@
       position: relative;
       text-align: center;
     }
+    #page1 #game {
+   width:120px;
+   height:50px;
+   background-image:url('https://i.imgur.com/tI3xwzc.gif');
+   background-size:contain;
+}
+
+//iPad 4 media query
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+   background-image:url(dog-r2.jpg);
+}
   .bottom-right {
+    color: white;
     position: absolute;
     bottom: -300px;
     right: 16px;

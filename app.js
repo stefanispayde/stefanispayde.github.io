@@ -152,7 +152,7 @@ const tallyScore = () => {
   $( "#player1" ).submit(function( event ) {
     event.preventDefault();
     formSubmission();
-    alert("Hand the computer to player 2. Remember! The timer will automatically start when you click ok, so be ready!");
+    alert("Hand the computer to player 2. Remember! The timer will automatically start when you click ok so be ready!");
     setTimer();
   });
 // on submit of form 2, compare values
@@ -164,46 +164,26 @@ const tallyScore = () => {
 
 start();
 
-// let timer;
-// let time = 45;
-// const setTimer = () => {
-//   time = 45;
-//   timer = setInterval(() => {
-//     time--;
-//     if( time == 0){
-//
-//       clearInterval(timer);
-//       alert("Time's up! Hit submit!");
-//     }
+let timer;
+let time = 45;
 
-function myTimer() {
-    let time, timer = null;
+const setTimer = () => {
+  timer = setInterval(() => {
+    time--;
+    if( time == 0){
 
-    myTimer = function() {
-        time = 45;
-        clearInterval( timer );
-
-        timer = setInterval(function() {
-            $('#timer').text(sec--);
-            if (sec == -1) {
-              clearInterval(timer);
-              alert("Time's up! Hit submit!");
-            }
-        } , 1000);
-        clearInterval(timer);
-    };
-
-    myTimer();
-}
+      clearInterval(timer);
+      alert("Time's up! Hit submit!");
+    }
 
 
     $('.timer').text('timer: ' + time + "s")
   }, 1000)
-}
 
-$("#button").on('click', (e) =>{
-  setTimer();
-})
 
+  $("#button").on('click', (e) =>{
+    setTimer();
+  })
+};
 
 });  //end of window upload

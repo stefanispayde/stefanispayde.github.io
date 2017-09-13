@@ -28,11 +28,6 @@
    background-image:url('https://i.imgur.com/tI3xwzc.gif');
    background-size:contain;
 }
-
-//iPad 4 media query
-@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
-   background-image:url(dog-r2.jpg);
-}
   .bottom-right {
     color: white;
     position: absolute;

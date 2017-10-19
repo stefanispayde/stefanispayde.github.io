@@ -1,12 +1,9 @@
-#page_1 {
-  /*background-image: url("https://i.imgur.com/tI3xwzc.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  /*background-size: cover;*/
-  background-size: 100%;
-  height: 50%;
-  width: 100%
-  margin: auto; 0;*/
+body {
+  /*background: url("images/Scattergories_background_rules_final.jpg") no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: white;
   font-family: 'Poiret One', cursive;
 }
@@ -21,12 +18,14 @@
   .container {
       position: relative;
       text-align: center;
-    }
-    #page1 #game {
-   width:120px;
-   height:50px;
-   background-image:url('https://i.imgur.com/tI3xwzc.gif');
-   background-size:contain;
+  }
+  #game {
+  background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
   .bottom-right {
     color: white;
@@ -124,8 +123,14 @@
   margin-left: 25px;
   margin-bottom: 15px;
 }
+/**************************/
+
 #page_3 {
-  background-color: black;
+  background-image: url("Scattergories_background_home.jpg");
+  background-position: center;
+  background-size: 300px;
+  width: 300px;
+  height: 300px;
   font-family: 'Poiret One', cursive;
   color:white;
 }

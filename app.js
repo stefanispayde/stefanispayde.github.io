@@ -2,6 +2,7 @@
 $(()=> {
 // console.log("JS running!");
 
+//global variables
 let player1Points = 0;
 let player1NumEmpty = 0;
 let player2Points = 0;
@@ -10,6 +11,8 @@ let die = "";
 let name1 = "";
 let name2 = "";
 
+
+//function for beginning game
 const start = () => {
    let getStarted = prompt("Welcome to Scattergories! This game has specific rules and even startegies. Please visit the rules page and have a look see. Are you ready to start? Y/N");
    if (getStarted === "Y" || getStarted === "y") {
@@ -24,6 +27,7 @@ const start = () => {
    }
 }
 
+//function allows players to input their name to announce winner
 const getName = () => {
   name1 = prompt("Please enter your name.");
   // let name1 = "";
@@ -32,7 +36,7 @@ const getName = () => {
   diceRoll();
 }
 
-//this is the array/for loop to choose a random letter from the dice, have click event roll die
+//this is the array/for loop to choose a random letter from the dice
 let rollDie = ['a', 'b', 'c','d','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 const diceRoll = () => {
@@ -42,9 +46,9 @@ const diceRoll = () => {
 
   }
   alert("Your letter is " + die + "."); //instead of alert set HTML of div to this phrase
-}
 
-//made these global due to scope issues and having to deal with so many functions
+}
+//global variables
 let player1Answers = [];
 let player2Answers = [];
 
@@ -60,7 +64,7 @@ const formSubmission = () => {
   notEmpty1(player1Answers);
 }
 
-
+// save form 2 answers into an array and hides player 1's answers
 const formSubmission2 = () => {
     let player2Inputs = $("#player2 input");
     for (let j = 0; j < player2Inputs.length; j++ ){
@@ -70,10 +74,10 @@ const formSubmission2 = () => {
     console.log(player2Answers);
     $('#player1').css('visibility', 'visible');
     notEmpty2(player2Answers);
-    clearInterval(timer);
+    // clearInterval(timer);
 }
 
-//this function will check through answer array for player 1 to check for empty strings
+//function to check through answer array for player 1 to check for empty strings
 const notEmpty1 = (array1) => {
   for (let i = 0; i < array1.length; i++) {
     if (array1[i] === "") {
@@ -83,7 +87,7 @@ const notEmpty1 = (array1) => {
   }
 }
 
-//this function will check through answer array for player 2 to check for empty strings
+//function to check through answer array for player 2 to check for empty strings
 const notEmpty2 = (array2) => {
   for (let j = 0; j < array2.length; j++) {
     if (array2[j] === "") {
@@ -112,7 +116,7 @@ const notEmpty2 = (array2) => {
   //   compareValues();
   // }
 
-// this function checks to see if players have the same answer on the same question, gives points based on number of unique answers and tallys them
+//function checks to see if players have the same answer on the same question, gives points based on number of unique answers and tallys them
 const compareValues = () => {
   for (let i = 0; i < player2Answers.length; i++ ){
     //this if statement compares answers to ensure they are not the same
@@ -126,6 +130,8 @@ const compareValues = () => {
   tallyScore();
 
 }
+
+//function takes unique answers for each player and subtracts any point for unanswered question
 const tallyScore = () => {
   console.log("---------");
   console.log(player1Points);
@@ -145,16 +151,18 @@ const tallyScore = () => {
       message = name2 + " is the winner!";
     }
       alert (message);
+
     }
 
 
-// on submit of form 1, save answers into an array-------also need hide function for player1's input before formSubmission2 is called
   $( "#player1" ).submit(function( event ) {
     event.preventDefault();
     formSubmission();
     alert("Hand the computer to player 2. Remember! The timer will automatically start when you click ok so be ready!");
+    clearInterval(timer);
     setTimer();
   });
+
 // on submit of form 2, compare values
   $( "#player2" ).submit(function( event ) {
     event.preventDefault();
@@ -164,26 +172,30 @@ const tallyScore = () => {
 
 start();
 
+//this timer does not reset when player 1 hits submit, it starts where it left off fo player 2,
+//continues to run even after game is finished
 let timer;
 let time = 45;
-
 const setTimer = () => {
+
   timer = setInterval(() => {
+    clearInterval();
     time--;
-    if( time == 0){
+    if( time === 0){
 
       clearInterval(timer);
       alert("Time's up! Hit submit!");
     }
 
-
     $('.timer').text('timer: ' + time + "s")
   }, 1000)
+}
 
 
-  $("#button").on('click', (e) =>{
-    setTimer();
-  })
-};
+
+$("#button").on('click', (e) =>{
+  setTimer();
+})
+
 
 });  //end of window upload

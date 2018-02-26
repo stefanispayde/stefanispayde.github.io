@@ -172,6 +172,8 @@ const tallyScore = () => {
 
 start();
 
+
+
 //this timer does not reset when player 1 hits submit, it starts where it left off fo player 2,
 //continues to run even after game is finished
 let timer;
@@ -179,7 +181,7 @@ let time = 45;
 const setTimer = () => {
 
   timer = setInterval(() => {
-    clearInterval();
+    // clearInterval();
     time--;
     if( time === 0){
 

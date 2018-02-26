@@ -1,32 +1,25 @@
 body {
-  /*background: url("images/Scattergories_background_rules_final.jpg") no-repeat center center fixed; */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white;
-  font-family: 'Poiret One', cursive;
+background-color: black;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
 }
-  #page_1  h1{
+
+#page_1  h1{
   font-family: 'Poiret One', cursive;
   font-size: 85px;
   letter-spacing: 3.5px;
   text-align: center;
   margin-top: auto 5px, 5px, auto;
   padding: 0;
+  color: white;
+  z-index: 2;
   }
+
   .container {
       position: relative;
       text-align: center;
   }
-  #game {
-  background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-}
   .bottom-right {
     color: white;
     position: absolute;
@@ -81,6 +74,11 @@ body {
   font-family: 'Poiret One', cursive;
   color: white;
 }
+
+/* ******************************* */
+/* page_2 game board */
+/* ******************************* */
+
 #page_2 h1 {
   font-size: 50px;
   margin-top: 15px;
@@ -125,16 +123,11 @@ body {
 }
 /**************************/
 
-#page_3 {
-  background-image: url("Scattergories_background_home.jpg");
-  background-position: center;
-  background-size: 300px;
-  width: 300px;
-  height: 300px;
-  font-family: 'Poiret One', cursive;
-  color:white;
+#page_3 body{
+  background-color: black;
 }
 #page_3 h1 {
+  font-family: 'Poiret One', cursive;
   font-size: 85px;
   letter-spacing: 3px;
   text-align: center;

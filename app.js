@@ -52,7 +52,7 @@ const diceRoll = () => {
 let player1Answers = [];
 let player2Answers = [];
 
-// save form 1 answers into an array
+// save form 1 answers into an array and hide player 1's answers
 const formSubmission = () => {
   let player1Inputs = $("#player1 input");
   for (let i=0; i < player1Inputs.length; i++) {
@@ -63,8 +63,9 @@ const formSubmission = () => {
   $('#player1').css('visibility', 'hidden');
   notEmpty1(player1Answers);
 }
+// clearInterval();
+// setTimer();
 
-// save form 2 answers into an array and hides player 1's answers
 const formSubmission2 = () => {
     let player2Inputs = $("#player2 input");
     for (let j = 0; j < player2Inputs.length; j++ ){
@@ -74,7 +75,7 @@ const formSubmission2 = () => {
     console.log(player2Answers);
     $('#player1').css('visibility', 'visible');
     notEmpty2(player2Answers);
-    // clearInterval(timer);
+
 }
 
 //function to check through answer array for player 1 to check for empty strings
@@ -144,11 +145,11 @@ const tallyScore = () => {
 
   let message = "";
     if (player1Tally > player2Tally) {
-      message = name1 + " is the winner!";
+      message = name1 + " is the winner with a total of " + player1Tally + " points!";
     }else if (player2Tally === player1Tally) {
       message = "It's a tie!";
     } else{
-      message = name2 + " is the winner!";
+      message = name2 + " is the winner with a total of " + player2Tally + " points!";
     }
       alert (message);
 
@@ -199,5 +200,9 @@ $("#button").on('click', (e) =>{
   setTimer();
 })
 
+$(".submitBtn").on('click', (e) =>{
+  clearInterval(timer);
+  setTimer();
+})
 
 });  //end of window upload

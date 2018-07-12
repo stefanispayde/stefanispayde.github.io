@@ -159,9 +159,8 @@ const tallyScore = () => {
   $( "#player1" ).submit(function( event ) {
     event.preventDefault();
     formSubmission();
-    alert("Hand the computer to player 2. Remember! The timer will automatically start when you click ok so be ready!");
-    clearInterval(timer);
-    setTimer();
+    alert("Hand the computer to player 2. Click the button to restart the timer and remember, no peeking at your list beforehand!");
+
   });
 
 // on submit of form 2, compare values
@@ -172,37 +171,54 @@ const tallyScore = () => {
   });
 
 start();
+//
+//
 
+let countdown;
+const timerDisplay = document.querySelector('.display__time-left');
+const buttons = document.querySelectorAll('[data-time]');
 
+function timer(seconds){
+const now = Date.now();
+const then = now + seconds * 1000;
+displayTimeLeft(seconds);
 
-//this timer does not reset when player 1 hits submit, it starts where it left off fo player 2,
-//continues to run even after game is finished
-let timer;
-let time = 45;
-const setTimer = () => {
+countdown = setInterval(() => {
+  const secondsLeft = (then - Date.now()) / 1000;
+  //check if we should stop it
+  if(secondsLeft < 0) {
+    clearInterval(countdown);
+    return;
+  }
+  //display it
+  displayTimeLeft(secondsLeft);
+}, 1000);
+}
 
-  timer = setInterval(() => {
-    // clearInterval();
-    time--;
-    if( time === 0){
+function displayTimeLeft(seconds) {
+  const display = `${seconds}`;
+  if(seconds <= 0) {
+  clearInterval(countdown);
+}
+  timerDisplay.textContent = display;
+}
 
-      clearInterval(timer);
-      alert("Time's up! Hit submit!");
-    }
-
-    $('.timer').text('timer: ' + time + "s")
-  }, 1000)
+function startTimer() {
+  const seconds = parseInt(this.dataset.time);
+  timer(seconds);
 }
 
 
+buttons.forEach(button => button.addEventListener('click', startTimer));
+
 
 $("#button").on('click', (e) =>{
-  setTimer();
+  timer();
 })
-
+//
 $(".submitBtn").on('click', (e) =>{
-  clearInterval(timer);
-  setTimer();
-})
+  clearInterval(countdown);
+  // timer(seconds);
+ })
 
 });  //end of window upload

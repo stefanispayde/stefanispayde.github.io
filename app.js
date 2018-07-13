@@ -171,8 +171,7 @@ const tallyScore = () => {
   });
 
 start();
-//
-//
+
 
 let countdown;
 const timerDisplay = document.querySelector('.display__time-left');
@@ -188,6 +187,7 @@ countdown = setInterval(() => {
   //check if we should stop it
   if(secondsLeft < 0) {
     clearInterval(countdown);
+    alert("Times up! Hit submit!")
     return;
   }
   //display it
@@ -199,6 +199,7 @@ function displayTimeLeft(seconds) {
   const display = `${seconds}`;
   if(seconds <= 0) {
   clearInterval(countdown);
+  alert("Times up! Hit submit!")
 }
   timerDisplay.textContent = display;
 }
@@ -218,7 +219,6 @@ $("#button").on('click', (e) =>{
 //
 $(".submitBtn").on('click', (e) =>{
   clearInterval(countdown);
-  // timer(seconds);
  })
 
 });  //end of window upload

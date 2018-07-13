@@ -56,11 +56,7 @@ background-color: black;
     float: right;
     width: 200px;
   }
-  /*h3 {
-    margin: 150px 315px;;
-    font-size: 28px;
-    letter-spacing: .5px;
-  }*/
+
   #player2 label {
     float: left;
   }
@@ -69,15 +65,16 @@ background-color: black;
     float: right;
     width: 200px;
   }
+
+/* ******************************* */
+/* page_2 game board */
+/* ******************************* */
+
 #page_2 {
   background-color: black;
   font-family: 'Poiret One', cursive;
   color: white;
 }
-
-/* ******************************* */
-/* page_2 game board */
-/* ******************************* */
 
 #page_2 h1 {
   font-size: 50px;
@@ -102,26 +99,29 @@ background-color: black;
 
 }
 
-#page_2 .timer #click {
+#page_2 p#click {
   font-size: 25px;
   color: white;
   margin-left: 45px;
+  margin-top: -25px;
 }
-#page_2 .timer #button {
+button.timer__button {
   background color: #FFFFFF;
   border: #FFFFFF 1px solid;
   font-family: 'Poiret One', cursive;
   font-size: 16px;
   color: black;
   padding: 5px;
-  margin-left: 15px;
+  margin-left: 20%;
 }
+
 .submitBtn {
   font-family: 'Poiret One', cursive;
   font-size: 16px;
   margin-left: 25px;
   margin-bottom: 15px;
 }
+
 /**************************/
 
 #page_3 body{
